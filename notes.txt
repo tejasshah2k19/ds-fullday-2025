@@ -1,0 +1,71 @@
+Data Structure 
+        Linear  :  Array , Stack , Queue  , LinkedList  
+        Non Linear : Tree , Graph 
+
+        Searching : Linear Search , Binary Search  
+        Sorting   : bubble , selection , insertion , merge , quick 
+
+
+-----------------------------------------------------------------------------------------------
+
+Complexity : 
+            1) Time Complexity 
+            2) Space Complexity 
+
+
+-----------------------------------------------------------------------------------------------
+
+
+
+Array : 
+            collection of same type of data with continuous memory allocation. 
+             
+
+            single data name can hold multiple values. 
+
+            types of array 
+                1) one dimension   [] 
+                2) two dimension   [][] 
+                3) multi dimension [][][] , [][][][] , +++
+
+    int arr[5];   ==>  arr 5  copy 
+   
+    how to access  : using  index 
+    index always starts with 0 and ends with SIZE-1 
+
+    arr[0] = 2
+    arr[1] = 7 
+
+    total memory consumtion by arr array => 
+    20 byte 
+------------------------------------------------------------------------------------------------
+
+
+array -> 10
+
+
+insert(1,10); -> add 10 at location 1  
+insert(2,20);
+insert(3,40);
+insert(2,30);
+insert(1,100);
+insert(5,50);
+insert(6,70);
+insert(4,80);
+insert(3,35);
+insert(1,-10); 
+
+
+
+
+
+array - 8
+insert(1,10)
+insert(2,20);
+insert(3,30);
+insert(2,50);
+insert(5,70);
+insert(4,40);
+insert(3,65);
+insert(2,100)
+
