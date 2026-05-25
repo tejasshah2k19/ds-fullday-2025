@@ -69,3 +69,57 @@ insert(4,40);
 insert(3,65);
 insert(2,100)
 
+
+
+
+
+array - 10
+insert(1,10)
+insert(2,20);
+insert(3,30);
+remove(1)
+insert(2,50);
+insert(5,70);
+insert(4,40);
+insert(3,65);
+remove(2)
+insert(2,100)
+insert(3,350)
+remove(3)
+
+
+
+20 100 65 30 40 70  
+-----------------------------------------------------------
+
+
+Searching ---> 
+            1)  Linear Search 
+            2)  Binary Search 
+
+
+
+Linear Search ----> O(n)
+
+        10  20  30  40  50  60  70  80  90  100 
+                                                i
+
+Search = 20 => found  | 2 times  
+Search = 70 => found  | 7 times 
+Search = 10 => found  | 1 time 
+Search = 110 => not found | 10 times 
+
+
+
+Complexity --> 
+        Time Complexity---> 
+                    BEST  :  OMEGA 
+                    AVG   :  Theta 
+                    WORST :  Big O 
+                    
+                    O(n)
+
+
+
+Array > insert 
+Array > remove 
