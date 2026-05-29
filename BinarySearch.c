@@ -15,7 +15,7 @@ void display()
     }
 }
 
-void binarySearch(int key)
+int binarySearch(int key)
 {
     int found = -1;
     int min = 0;
@@ -29,7 +29,7 @@ void binarySearch(int key)
         if (arr[mid] == key)
         {
             found = 1;
-            break;
+            return mid; 
         }
         else if (arr[mid] > key)
         {
@@ -41,7 +41,7 @@ void binarySearch(int key)
         }
     }
 
-    found == -1 ? printf("%d not found ",key): printf(" %d found",key); 
+    return mid*-1; 
 
 }
 
@@ -51,12 +51,13 @@ void binarySearch(int key)
 int main()
 {
 
-    int key;
+    int key;int ans;
     display();
     printf("enter number that you want to search");
     scanf("%d", &key); // 50 -50
 
-    binarySearch(key);
+    ans = binarySearch(key); // 50 present > return 1 not present - location where we can add this number  
 
+    printf("\n ans  = %d ",ans);
     return 0;
 }
