@@ -13,25 +13,27 @@ void display()
     }
 }
 
-void bubbleSort()
+void selectionSort()
 {
 
-    int i, j;
+    int i, j, min;
     int tmp;
 
-    //n *  n  => n2  => O(n*n) => O(n^2) =>   
     for (i = 0; i < SIZE; i++)
     {
-        for (j = 0; j < SIZE - 1; j++)
+        min = i;
+
+        for (j = i + 1; j < SIZE; j++)
         {
-            if (arr[j] > arr[j + 1])
+
+            if (arr[min] > arr[j])
             {
-                // swap
-                tmp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = tmp;
+                j = min;
             }
         }
+        tmp = arr[i];
+        arr[i] = arr[min];
+        arr[min] = tmp;
     }
 }
 
