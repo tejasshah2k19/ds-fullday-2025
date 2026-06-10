@@ -2,18 +2,84 @@
 #define SIZE 5
 
 int stack[SIZE];
+int top = -1;
 
 void push(int num)
 {
+
+    if (top == SIZE - 1)
+    {
+        printf("\nStack OverfLow : %d ", num);
+    }
+    else
+    {
+        top++;
+        stack[top] = num;
+    }
 }
 
 void pop()
 {
+    if (isEmpty())
+    {
+        printf("\nStack UnderFLow");
+    }
+    else
+    {
+        printf("\n%d poped ", stack[top]);
+        top--;
+    }
 }
 
 void display()
 {
+    int i;
+    if (isEmpty())
+    {
+        printf("\nStack UnderFLow");
+    }
+    else
+    {
+        for (i = top; i >= 0; i--)
+        {
+            printf("\n%d", stack[i]);
+        }
+    }
 }
+
+int isEmpty()
+{
+
+    if (top == -1)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+
+void peek(){
+    if(isEmpty()){
+        printf("\nStack is Empty");
+    }else{
+        printf("\n%d",stack[top]); 
+    }
+}
+
+void peep(int location){
+    
+    int index = top - location + 1; 
+    if(index < 0 || index > top ){
+        printf("\nInvalid Location");
+    }else{
+        printf("\n%d",stack[index]);
+    }
+}
+
+
 
 int main()
 {
