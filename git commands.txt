@@ -1,0 +1,62 @@
+git init 
+
+git remote add origin https://github.com/tejasshah2k19/facebook_del.git
+
+commands.txt 
+Login.html 
+
+
+git add 
+
+git add Login.html 
+git add Signup.html 
+git add Login.html Signup.html 
+
+git add *.html 
+git add . 
+
+
+git status 
+
+
+git commit -m " Login feature "   Login.html 
+git commit -m " Login feature "   Login.html Signup.html 
+git commit -m " Login feature "   . 
+
+
+git commit -m " Login feature "   Login.html 
+
+
+git push 
+
+git push origin master 
+git push origin main 
+
+branch 
+
+
+clone 
+
+git clone https://github.com/tejasshah2k19/facebook_del.git
+
+
+pull 
+
+git pull origin master 
+
+
+
+ds -> remote repo -> push -> private 
+pull 
+
+
+share -> contributor -> collobrator 
+
+
+
+clone ->
+new file -> push 
+
+------------------------------------------------------------------
+
+ 
