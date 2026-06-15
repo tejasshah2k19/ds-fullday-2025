@@ -224,4 +224,41 @@ STACK
             PUSH 
             POP 
             Display 
-            
+
+
+
+Reverse string using stack. 
+
+
+enter the string 
+royal   {push->royal}
+layor 
+
+------------------------------------------------------
+
+
+
+PARA STACK 
+
+
+()(()(()))
+
+[ { [  (  ) ] } ]
+
+
+{ [ { {  ) } ] }
+
+
+input para : 
+()(()(())) -> valid 
+[ { [  (  ) ] } ] -> valid 
+{ [ { {  ) } ] } -> invalid 
+()[][ -> invalid 
+()[]] -> in valid 
+
+
+PUSH 
+POP 
+
+
+
