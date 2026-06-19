@@ -262,3 +262,30 @@ POP
 
 
 
+-----------------------------------------------
+
+queue --> 
+
+dmart --> billing -> queue -> FiFo | FCFS 
+
+
+1) simple queue : memory waste
+2) circular queue
+3) DEQUEUE 
+
+
+-----------------------------------------------
+
+
+Sorting --> 
+
+25 87 52 56 98 96 32 
+
+25  32  52 56 87 96 98   | ASC 
+
+98 96 87 56 52 32 25 | DSC 
+
+
+insertion sort ======> 
+
+

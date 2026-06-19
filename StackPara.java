@@ -37,7 +37,8 @@ public class StackPara {
                 stack.push(x);
             }
         }
-
+        //stack string 
+        
         System.out.println(stack);
 
 
