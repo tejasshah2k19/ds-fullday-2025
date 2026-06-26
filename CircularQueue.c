@@ -39,10 +39,24 @@ void enqueue(int data)
 
 void deQueue()
 {
-    printf("\n%d removed", queue[front]);
-    front++;
-}
 
+    if (front == rear)
+    {
+        printf("\n%d removed", queue[front]);
+        front = -1;
+        rear = -1;
+    }
+    else if (front == SIZE - 1)
+    {
+        printf("\n%d removed", queue[front]);
+        front = 0;
+    }
+    else
+    {
+        printf("\n%d removed", queue[front]);
+        front++;
+    }
+}
 void display()
 {
 
@@ -70,28 +84,28 @@ void display()
 
 int main()
 {
-enqueue(10);
-enqueue(20);
-enqueue(30);
-enqueue(40);
-enqueue(50);
- 
-display(); // 10 20 30 40 50
-deQueue();
-deQueue();
-display(); // 30 40 50
+    enqueue(10);
+    enqueue(20);
+    enqueue(30);
+    enqueue(40);
+    enqueue(50);
 
-enqueue(100);
+    display(); // 10 20 30 40 50
+    deQueue();
+    deQueue();
+    display(); // 30 40 50
 
-enqueue(200);
+    enqueue(100);
 
-enqueue(300);
+    enqueue(200);
 
-enqueue(400);
+    enqueue(300);
 
-enqueue(500);//full 
+    enqueue(400);
 
-display(); // 30 40 50 100 200 300 400 
+    enqueue(500); // full
 
-return 0;
+    display(); // 30 40 50 100 200 300 400
+
+    return 0;
 }
