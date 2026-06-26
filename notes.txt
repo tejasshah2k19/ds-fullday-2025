@@ -289,3 +289,142 @@ Sorting -->
 insertion sort ======> 
 
 
+-----------------------------------------------
+void display(){
+
+    for(int i=0;i<SIZE;i++){
+        printf(" %d",arr[i]); 
+    }
+}
+
+SIZE 
+5       5  times 
+10      10 times 
+50      50 times 
+100     100 times 
+150
+
+
+O(SIZE)
+O(n)
+
+
+  for(int i=0;i<SIZE;i++){
+      for(int j=0;j<SIZE;j++){
+        printf(" %d",arr[j]); 
+      }
+  }
+
+SIZE * SIZE 
+n*n 
+O(n^2)
+----------------------------------------------------------
+Array : insert( ): n , removeItem( ) : n  , display( ) : n
+
+Stack : PUSH():O(1)  POP():O(1) display():O(n)  PEEP():O(1)   PEEK():O(1)
+
+Sorting : bubble , selection , insertion 
+
+Searching : linear O(n), Binary :  
+
+
+SIZE 5 
+
+loaction
+4 : 1 
+3 : 2
+1 : 4 
+
+SIZE-Location 
+n-1 
+n
+O(n)
+
+
+
+1   2   3   4   5   6   7   8   9   10  11  12
+X 
+
+1 
+2
+3 
+
+
+n/2 ---- n 
+
+O(log n)
+
+
+for(i=1;i<=n;i=i*2){
+
+}
+n=50000
+1 2 4 8 16  32  64  128 256 512 1024    2048    4096       
+O(log n)
+
+
+
+
+--------------------------------------------------------
+Queue : 
+
+    Circular Queue : 
+
+
+Dmart : X Y Z P
+
+    Queue 
+    FiFo 
+    First In First Out 
+
+    Sale => 
+
+
+    insert : PUSH : enqueue 
+    remove : POP  : dequeue 
+    
+
+
+
+
+									
+									
+									
+									
+	enqueue	10		f++	r++	queue[r] = num			
+	enqueue	20			r++	queue[r] = num			
+	enqueue	30			r++	queue[r] = num			
+	enqueue	40			r++	queue[r] = num			
+	enqueue	50			r++	queue[r] = num			
+									
+	display	10 20 30 40 50 							
+									
+	dequeue								
+	dequeue								
+									
+	display	30 40 50							
+									
+	enqueue	100							
+	enqueue	200							
+	enqueue	300							
+	enqueue	400							
+	enqueue	500							
+	display	30 40 50 100 200 300 400							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

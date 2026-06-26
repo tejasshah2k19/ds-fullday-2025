@@ -11,8 +11,8 @@ void display(){
     for(i=0;i<SIZE;i++){
         printf(" %d ",arr[i]);
     }
-
 }
+
 void insertionSort()
 {
     int i, j, tmp;

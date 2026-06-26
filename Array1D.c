@@ -26,7 +26,7 @@ void insert(int location, int data)
         {
             arr[j] = arr[j - 1];
         }
-
+        //SIZE-Location 
         arr[index] = data;
     }
 }
@@ -42,6 +42,7 @@ void removeArray(int location)
 
     arr[SIZE - 1] = 0;
 }
+
 
 void linearSearch(int key)
 {
@@ -63,6 +64,15 @@ void linearSearch(int key)
         printf("%d Not Found ", key); // 50 not found
     }
 }
+
+
+void display(){
+
+    for(int i=0;i<SIZE;i++){
+        printf(" %d",arr[i]); 
+    }
+}
+
 
 int main()
 {
