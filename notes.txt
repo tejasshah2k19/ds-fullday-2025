@@ -413,6 +413,219 @@ Dmart : X Y Z P
 
 
 
+----------------------------------------------------------------------------------
+
+        Double Ended Queue 
+IRD                             ORD 
+input                           Output 
+
+
+[ 0 1 2 3 4 5 6 7 8 ]
+
+insertion rear 
+deletion front 
+insertion front 
+delete rear 
+
+
+
+IRD 
+    insert rear 
+    delete both side 
+
+ORD 
+    insert both side 
+    delete front 
+
+----------------------------------------------------------
+1. insert front 
+2. insert rear 
+3. remove front 
+4. remove end 
+5. display 
+
+    [60   20  X  X   X ]
+     f      
+           r 
+
+
+    1
+    10 
+
+    2
+    20 
+
+    2
+    30
+
+    1
+    40
+
+    3 
+    10 removed    
+
+    5
+    20 30 
+
+    1
+    60
+
+    5
+    60 20 30 
+
+
+    4.
+    rear-- 
+
+----------------------------------------------------------
+SMA 
+    int a; //4 byte 
+    //release ? 
+DMA 
+    1) release   {free()}
+    2) allocate  {calloc() malloc()}
+    3) re-allocate  {realloc()}
+
+stdlib.h 
+
+memory ---> data type ---> pointer 
+
+
+int main(){
+
+    int b[500]; //250 -> -250 , 600 +100  
+    int a; //4 byte 
+
+     int *p;
+     float *x; 
+
+    //end 
+    //2000 
+
+
+    return 0;
+}
+
+
+
+-----------------------------------------------------
+
+1) addition of two numbers using pointer.
+    a = 10 
+    b = 20
+    c = a+b {pointer}
+    c => 30 
+
+    main(){
+        int a=10;
+        int b = 20;
+        int c; 
+        int *p;
+        int *q; 
+
+        p = &a;
+        q = &b; 
+ 
+        c = *p + *q ;
+
+        printf(" %d ",c); 
+
+    }
+
+2) addition of all numbers in array using pointer 
+
+    int a[] = {10,20,30,40,50};
+
+    int *p = &a[0]; 
+
+    sum => 150
+
+3) student structure -> 
+            name 
+            maths
+            sci
+            eng 
+
+            getData()
+            printData()
+
+    single student 
+    
+---------------------------------------------------------------------
+
+DMA 
+
+
+SMA 
+int a; // 4 byte 
+int x[500] 
+//
+//
+//
+//250 
+//550 
+//
+//int a no more required 
+//
+//
+//
+//
+//
+//
+//
+//? 
+
+
+
+
+stdlib.h 
+
+1   calloc()
+2   malloc() 
+3   realloc() 
+4   free()
+
+int a; //stack 
+dma // heap 
+
+
+instance => heap 
+local => stack
+method => stack 
+instance variable => heap  
+static variable => heap 
+
+
+-------------------------------------------------
+
+int a; 
+
+int *p; //4 byte 
+
+
+p = (int*)malloc(sizeof(int));//4 byte 
+
+p =  malloc(sizeof(int));//4 byte 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
