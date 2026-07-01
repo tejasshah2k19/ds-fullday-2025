@@ -23,6 +23,8 @@ int main()
     //sum 
     //max 
 
+    //strucutre => malloc
+
     free(x); 
     return 0;
 }
