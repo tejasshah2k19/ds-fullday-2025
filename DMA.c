@@ -17,7 +17,6 @@ int main()
     printf("\n p => %d ",*p);
     free(p);
 
-
     //pf
     //sf 
     //sum 

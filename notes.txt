@@ -607,9 +607,30 @@ p = (int*)malloc(sizeof(int));//4 byte
 
 p =  malloc(sizeof(int));//4 byte 
 
+----------------------------------------------------------
+
+linked list => 
+
+
+calloc
+malloc 
 
 
 
+struct node {
+    int data; 
+    struct node  *next; 
+}; 
+
+struct node *p; 
+
+
+class Node{
+    int data; 
+    Node next;
+}
+
+Node p  = new Node(); 
 
 
 

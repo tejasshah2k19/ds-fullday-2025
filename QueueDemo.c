@@ -69,6 +69,7 @@ int main()
     enQueu(40);
 
     display(); // 10 20 30 40
+    
 
     deQueue();
     deQueue();
