@@ -633,6 +633,9 @@ class Node{
 Node p  = new Node(); 
 
 
+1) single linked list           [ data | next ]
+2) double linked list           [  prev| data | next ]
+3) circular linked list 
 
 
 
