@@ -638,26 +638,129 @@ Node p  = new Node();
 3) circular linked list 
 
 
+-------------------------------------------------------------------------------------------------
+
+Non Linear DS 
+        Tree 
+        Graph 
+
+
+
+        Tree 
+
+Rule of Binary Tree : 
+    parent -> min child :0  , max child :2 
+
+
+Rule of BST : 
+1	binary tree 
+2	node > parent -> right
+3	node < parent -> left
+
+
+BST 
+    19,18,17,65,43,25,6,7,8,90,98,76,54,32
+
+    32,54,76,98,90,8,7,6,25,43,65,17,18,19
+    
+------------------------------------------------------------------------
+
+Recursion -> function calling itself 
+
+BASE CASE -> 
+
+void add(){
+    add();//Recursion 
+}
+
+void main(){
+    add(); // non reucrsive call -> normal calling 
+    main();//reucrsive call 
+}
+
+
+
+print Royal 5 times -> loop -> 
+
+
+void printName(int cnt){//5
+    printf("\nRoyal");//Royal Royal Royal Royal Royal     
+    cnt++; //5->6 
+    if(cnt<=5){  
+        printName(cnt);//5
+    }
+
+}
+
+
+
+void printNum(int cnt){// 
+    printf("\n%d",cnt);//      
+    cnt++; //1->2
+    if(cnt<=5){  
+        printNum(cnt);//2
+    }
+    
+}
+
+
+
+void printNum2(int cnt){// 
+    cnt++; //1->2
+    if(cnt<=5){  
+        printNum2(cnt);//2
+    }
+     printf("\n%d",cnt);//      
+}
+
+void main(){
+    //printName(1);//
+    printNum2(1); 
+}
 
 
 
 
 
+void printNum3(int cnt){// 
+    printf(" %d ",cnt);
+    cnt++;  
+    if(cnt<=5){  
+        printNum3(cnt);//2
+    }
+     printf(" %d ",cnt);//      
+}
+
+void main(){
+     printNum3(1); 
+}
 
 
+-----------------------------------------------------------------------------------
+
+5 6 7 8 9 10 
+
+printNum(int start,int end)
+printNum(5,10);
+
+-----------------------------------------------------------------------------------
 
 
+10 9 8  7 6 5 
+
+printNum(int start,int end)
+printNum(5,10);
 
 
+-----------------------------------------------------------------------------------
 
 
+tree travesal ->
+        inOrder      left - root  - right  
+        preOrder     root - left  - right 
+        postOrder    left - right - root 
 
-
-
-
-
-
-
+-----------------------------------------------------------------------------------
 
 
 
