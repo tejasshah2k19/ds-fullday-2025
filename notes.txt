@@ -762,6 +762,36 @@ tree travesal ->
 
 -----------------------------------------------------------------------------------
 
+                            85
+                    45           95
+                25      50              105
+
+
+search(22) -> false 
+search(50) -> true 
+
+
+
+
+-----------------------------------------------------------------------------------
+deletion in BST 
+
+1) node -> zero child -> leaf node 
+2) node -> 1 child -> child replace -> deleted node 
+3) node -> 2 child -> inOrder successor , inOrder predecessor 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

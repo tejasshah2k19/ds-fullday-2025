@@ -23,6 +23,22 @@ public class TreeDemo {
         bst.addNode(bst.root, 40);//30
 
         bst.inOrder(bst.root);//asc 
+
+        System.out.println(bst.search(bst.root, 40));//true 
+        System.out.println(bst.search(bst.root, 400));//false 
+
+        System.out.println("delete 1200 : ");
+        System.out.println(bst.deleteNode(bst.root, 1200));
+        bst.inOrder(bst.root);
+        /*
+                            20
+                    5               30
+                1       15      25      40 
+                    9 
+                        12 
+
+        */
+
     }
 }
 
@@ -71,6 +87,50 @@ class BinarySearchTree {
 
         }
     }
+
+    boolean search(Node root, int key) {
+        if (root != null) {
+            if (root.data == key) {
+                return true;
+            } else if (key > root.data) {
+                //right 
+                return search(root.right, key);
+            } else {
+                return search(root.left, key);
+            }
+        }
+        return false;
+    }
+
+    Node deleteNode(Node root, int key) {
+        if (root != null) {
+            if (root.data == key) {
+                //0 child 
+
+                if (root.left == null && root.right == null) {
+                    System.out.println("delet with 0 child");
+                    return null;
+                } else if (root.right == null) {
+                    System.out.println("deleted with 1 child");
+                    return root.left;
+                } else if (root.left == null) {
+                    System.out.println("deleted with 1 child");
+                    return root.right;
+                } else {
+                    System.out.println("deleted with 2 child");
+                    //2 child 
+                    //
+                }
+
+            } else if (key > root.data) {
+                root.right =  deleteNode(root.right, key);
+            } else {
+                root.left = deleteNode(root.left, key);
+            }
+        }
+        return root;
+    }
+
 }
 
 class Node {
