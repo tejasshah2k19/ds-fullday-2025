@@ -27,9 +27,14 @@ public class TreeDemo {
         System.out.println(bst.search(bst.root, 40));//true 
         System.out.println(bst.search(bst.root, 400));//false 
 
-        System.out.println("delete 1200 : ");
-        System.out.println(bst.deleteNode(bst.root, 1200));
+        // System.out.println("delete 1200 : ");
+        // System.out.println(bst.deleteNode(bst.root, 1200));
         bst.inOrder(bst.root);
+
+        bst.root = bst.deleteNode(bst.root, 20);
+        System.out.println("after removing root");
+        bst.inOrder(bst.root);
+
         /*
                             20
                     5               30
@@ -37,8 +42,8 @@ public class TreeDemo {
                     9 
                         12 
 
-        */
-
+         */
+        // System.out.println( bst.findMin(bst.root.left).data);
     }
 }
 
@@ -102,6 +107,13 @@ class BinarySearchTree {
         return false;
     }
 
+    Node findMin(Node root) {//25
+        if (root != null && root.left != null) {
+            return findMin(root.left);
+        }
+        return root;
+    }
+
     Node deleteNode(Node root, int key) {
         if (root != null) {
             if (root.data == key) {
@@ -120,10 +132,14 @@ class BinarySearchTree {
                     System.out.println("deleted with 2 child");
                     //2 child 
                     //
+                    Node smallestNode = findMin(root.right);
+                    this.root.data = smallestNode.data;
+                    deleteNode(this.root.right, smallestNode.data);
+                    return root;
                 }
 
             } else if (key > root.data) {
-                root.right =  deleteNode(root.right, key);
+                root.right = deleteNode(root.right, key);
             } else {
                 root.left = deleteNode(root.left, key);
             }
