@@ -941,3 +941,71 @@ Dobule Rotation => RL , LR
 
 5
 80, 40, 120, 20, 60, 100, 140, 10, 30, 50, 70, 90, 110, 130, 150
+
+
+----------------------------------------------------------------------
+    BST 
+
+    10  20  30  40  50  
+
+    10
+        20  
+            30
+                40
+                    50
+
+    Height => 5 
+    max node => 2^5 - 1 : 31  
+
+
+
+    10
+            20
+    H  : 2 
+    M  : 3 
+
+      10
+   X     20 
+  X X   X      30
+    
+    
+    h : 3   2^3 - 1  2^h - 1 
+    M : 7 
+
+
+
+----------------------------------------------------------------------
+imbalance ---> Balance => AVL Tree 
+
+    imbalance 
+1)  RR
+2)  LL
+3)  RL
+4)  LR
+
+    rotate 
+1) left rotate 
+2) right rotate 
+
+
+
+how to identify tree is in imbalance state? 
+Node-> Balance Factor {-1 0 1 }
+
+Node -> Left Height - Right Height
+
+
+                10 
+            7        20 
+
+
+
+
+
+
+
+
+
+
+
+
