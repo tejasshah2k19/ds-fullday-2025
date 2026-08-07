@@ -75,9 +75,22 @@ class AVL {
             int balanceFactor = leftHeight - rightHeight;
 
             if (balanceFactor < -1) {
-                System.out.println("RIGHT Imbalance => " + root.data + "(" + balanceFactor + ")");
+                //root->50 
+                //data -> 55 
+
+                if (data > root.right.data) {
+                    System.out.println("RIGHT RIGHT Imbalance for => " + root.data + "(" + balanceFactor + ")" + " when we add " + data);
+                } else {
+                    System.out.println("RIGHT LEFT Imbalance for => " + root.data + "(" + balanceFactor + ")" + " when we add " + data);
+                }
+
             } else if (balanceFactor > 1) {
-                System.out.println("Left Imbalance => " + root.data + "(" + balanceFactor + ")");
+                if (data < root.left.data) {
+                    System.out.println("Left Left Imbalance => " + root.data + "(" + balanceFactor + ")" + "when we add " + data);
+
+                } else {
+                    System.out.println("Left Right Imbalance => " + root.data + "(" + balanceFactor + ")" + " when we add " + data);
+                }
             }
 
             return root;
