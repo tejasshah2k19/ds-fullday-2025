@@ -54,25 +54,10 @@ class AVL {
             }
 
             //height 
-            int leftHeight = 0;
-            int rightHeight = 0;
-
-            if (root.left != null) {
-                leftHeight = root.left.height;
-            }
-
-            if (root.right != null) {
-                rightHeight = root.right.height;
-            }
-
-            if (leftHeight > rightHeight) {
-                root.height = leftHeight + 1;
-            } else {
-                root.height = rightHeight + 1;
-            }
+            root.height = calcHeight(root);
             // balance factor 
 
-            int balanceFactor = leftHeight - rightHeight;
+            int balanceFactor = getBF(root);
 
             if (balanceFactor < -1) {
                 //root->50 
@@ -80,6 +65,11 @@ class AVL {
 
                 if (data > root.right.data) {
                     System.out.println("RIGHT RIGHT Imbalance for => " + root.data + "(" + balanceFactor + ")" + " when we add " + data);
+                    
+                    Node newNode =  leftRotate(root);
+                    root.height = calcHeight(root);
+                    return  newNode; 
+                
                 } else {
                     System.out.println("RIGHT LEFT Imbalance for => " + root.data + "(" + balanceFactor + ")" + " when we add " + data);
                 }
@@ -87,11 +77,11 @@ class AVL {
             } else if (balanceFactor > 1) {
                 if (data < root.left.data) {
                     System.out.println("Left Left Imbalance => " + root.data + "(" + balanceFactor + ")" + "when we add " + data);
-
                 } else {
                     System.out.println("Left Right Imbalance => " + root.data + "(" + balanceFactor + ")" + " when we add " + data);
                 }
             }
+
 
             return root;
         }
@@ -104,6 +94,50 @@ class AVL {
             System.out.println(root.data + "(" + root.height + ")"); //50(1)
             inOrder(root.right);
         }
+    }
+
+    Node leftRotate(Node root) {
+        Node rootRight = root.right;
+        Node rootRightLeft = root.right.left;
+
+        root.right = rootRightLeft;
+        rootRight.left = root;
+        return rootRight;
+    }
+
+    int calcHeight(Node root) {
+
+        int leftHeight = 0;
+        int rightHeight = 0;
+
+        if (root.left != null) {
+            leftHeight = root.left.height;
+        }
+
+        if (root.right != null) {
+            rightHeight = root.right.height;
+        }
+
+        if (leftHeight > rightHeight) {
+            return leftHeight + 1;
+        } else {
+            return rightHeight + 1;
+        }
+
+    }
+
+    int getBF(Node root) {
+        int leftHeight = 0;
+        int rightHeight = 0;
+
+        if (root.left != null) {
+            leftHeight = root.left.height;
+        }
+
+        if (root.right != null) {
+            rightHeight = root.right.height;
+        }
+        return leftHeight - rightHeight;
     }
 }
 
