@@ -42,6 +42,7 @@ class AVL {
             root.data = data;
             root.left = null;
             root.right = null;
+            root.height = 1;
             return root;
         } else {
 
@@ -52,6 +53,33 @@ class AVL {
                 root.left = addNode(root.left, data);
             }
 
+            //height 
+            int leftHeight = 0;
+            int rightHeight = 0;
+
+            if (root.left != null) {
+                leftHeight = root.left.height;
+            }
+
+            if (root.right != null) {
+                rightHeight = root.right.height;
+            }
+
+            if (leftHeight > rightHeight) {
+                root.height = leftHeight + 1;
+            } else {
+                root.height = rightHeight + 1;
+            }
+            // balance factor 
+
+            int balanceFactor = leftHeight - rightHeight;
+
+            if (balanceFactor < -1) {
+                System.out.println("RIGHT Imbalance => " + root.data + "(" + balanceFactor + ")");
+            } else if (balanceFactor > 1) {
+                System.out.println("Left Imbalance => " + root.data + "(" + balanceFactor + ")");
+            }
+
             return root;
         }
     }
@@ -60,7 +88,7 @@ class AVL {
 
         if (root != null) {
             inOrder(root.left);
-            System.out.println(root.data);
+            System.out.println(root.data + "(" + root.height + ")"); //50(1)
             inOrder(root.right);
         }
     }
@@ -72,4 +100,5 @@ class Node {
     int data;
     Node left;
     Node right;
+    int height;
 }
