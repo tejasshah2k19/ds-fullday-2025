@@ -999,6 +999,74 @@ Node -> Left Height - Right Height
             7        20 
 
 
+----------------------------------------------------------------------------
+
+rotataion techniques:- 
+	1) Left Rotate 
+	2) Right Rotate 
+
+imbalance ->
+	1) RR 
+	2) LL 
+	3) RL
+	4) LR 
+
+balance factor -> -1 0 1 
+
+
+50  80  90  100 
+
+    
+        50(-2)
+            80(-1)              RR imbalance => left rotataion =>                   80(-1)
+                90(0)                                                   (0)50              90(-1)
+                                                                                                 100(0) 
+
+
+
+70, 50, 60, 40, 30, 80, 90
+
+            70(2)
+      50(-1)                    Left Rigth => LR       => left rotate =>       70  => right rotate  =>     60
+           60(0)                                                            60                          50    70
+                                                                          50                  
+
+
+
+
+100, 50, 150, 25, 10, 35, 60, 90,75, 125, 175,110, 140, 160, 190
+
+
+inOrder  -->   left - root - right 
+preOrder -->   root - left - right 
+postOrder -->  left - right - root 
+
+--------------------------------------------------------------------------------
+
+class A{
+
+    String name;
+
+    main(){
+        A a = new A();
+
+        //gc 
+        S.o.t("hi");
+    }
+}
+//0
+
+--------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
 
 
 
