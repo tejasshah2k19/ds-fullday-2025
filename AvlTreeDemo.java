@@ -73,6 +73,7 @@ class AVL {
                 } else {
                     System.out.println("RIGHT LEFT Imbalance for => " + root.data + "(" + balanceFactor + ")" + " when we add " + data);
                 }
+                //
 
             } else if (balanceFactor > 1) {
                 if (data < root.left.data) {
